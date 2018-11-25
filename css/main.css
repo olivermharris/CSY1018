@@ -1,31 +1,32 @@
 /* Google Font Imports */
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-
 /* Header Text | style: handwriting */
-/* Zeroing Elements */
+
+/* Zeroing Elements | Defaults */
 * {
   padding: 0;
   margin: 0;
 }
 
-.article::first-letter {
+/*.article::first-letter {
   color: #135394;
   font-size: 3em;
   text-transform: uppercase;
   font-family: 'Pacifico', cursive;
-}
+}*/
 
 .header {
   background: #135394;
-  color: #FFFFFF;
+  color: #ddd;
+
   height: 15vh;
-  width: 100%;
+  width: 100vw;
+
   font-family: 'Pacifico', cursive;
-  font-size: 4em;
+  font-size: 3vh;
+
   position: fixed;
   top: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 
@@ -49,6 +50,12 @@
     ". main ."
     "footer footer footer";
   grid-gap: 25px;
+}
+
+/* splash screen */
+.splash {
+  height: 100vh;
+  font-size: 9vmin;
 }
 
 .hidden {
