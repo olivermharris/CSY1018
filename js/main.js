@@ -7,7 +7,10 @@ let pos;
 */
 window.onload = () => { /* run after contents loaded */
 //  document.getElementById('hd').style.height = "100vh";
-  document.getElementById('hd').classList.add("splash");
+  if (checkAnchor() == true) {
+    document.getElementById('hd').classList.add("splash");
+  }
+  document.getElementById('hd').style.position = "fixed";
   document.getElementById('menu').classList.add("hidden");
 
 //  if there is an article, append to page title
@@ -16,6 +19,16 @@ window.onload = () => { /* run after contents loaded */
     document.title = `Byte Planet | ${article.dataset.title}`
   }
 };
+
+function checkAnchor() {
+  let url = document.URL;
+
+  let bookmark = url.split('#');
+
+  if (bookmark[1] == null) {
+    return true;
+  }
+}
 
 /*
   run arrow function on page scroll
