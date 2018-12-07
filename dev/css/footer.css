@@ -15,7 +15,6 @@
 
 .footer > img.icon {
   grid-area: footlogo;
-  filter: invert(100%);
   display: block;
   margin: auto;
   align: center;
