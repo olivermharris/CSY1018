@@ -46,5 +46,5 @@
   grid-area: main;
 
   /* display using 1D array of data */
-  display: flex;
+  /* display: flex; */
 }
