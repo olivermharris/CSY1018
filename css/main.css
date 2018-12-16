@@ -1,63 +1,206 @@
-/* Google Font Imports */
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-/* Header Text | style: handwriting */
+/* google font imports */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
-/* Zeroing Elements | Defaults */
-* {
-  padding: 0;
+/* #0D47A1 B900*/
+/* #1976D2 B700 */
+/* #448AFF BA200 */
+/* #90CAF9 B200 */
+
+/* colour scheme */
+  /* primary blue material 900 #0D47A1 */
+
+/* default style */
+
+body
+{
   margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-/*.article::first-letter {
-  color: #135394;
-  font-size: 3em;
-  text-transform: uppercase;
-  font-family: 'Pacifico', cursive;
-}*/
-
-.header {
-  background: #135394;
-  color: #ddd;
-
-  height: 15vh;
-  width: 100vw;
-
-  font-family: 'Pacifico', cursive;
-  font-size: 3vh;
-
-  /* position: absolute; */
-  top: 0;
-}
-
-
-.main {
-  grid-area: main;
-  //display: flex;
-}
-
-.footer {
-  grid-area: footer;
-  background: #323232;
-}
-
-.wrapper {
-  width: 100%;
-  display: grid;
-  grid-template-rows: 25px 1fr 250px;
-  grid-template-columns: minmax(0, 150px) minmax(250px, 1fr) minmax(0, 150px);
-  grid-template-areas:
-    ". . ."
-    ". main ."
-    "footer footer footer";
-  grid-gap: 25px;
-}
-
-/* splash screen */
-.splash {
-  height: 100vh;
-  font-size: 9vmin;
-}
-
-.hidden {
+details.mNav
+{
   display: none;
+}
+
+/* when javascript is enabled, hide the javascript disabled popup */
+
+section.noJS
+{
+  display: none;
+}
+
+
+
+header
+{
+  background-color: #1976D2;
+  width: 100%;
+  height: 100vh;
+}
+
+header img
+{
+  width: 100%;
+  height: 100%;
+  filter: opacity(70%);
+  transition: .5s;
+}
+
+header.responsive img
+{
+  filter: none
+}
+
+header h1
+{
+  visibility: hidden;
+}
+
+nav
+{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5vh;
+  transform: .5s;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+
+  box-sizing: border-box;
+  transition: .5s;
+  filter: opacity(50%);
+}
+
+nav a
+{
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav a .logo
+{
+  display: inline-block;
+  transition: .5s;
+  filter: brightness(100%);
+  height: 5vh;
+  width: 5vh;
+}
+
+nav > ul
+{
+  font-family: 'Roboto', sans-serif;
+
+  list-style: none;
+
+  display: flex;
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > ul li
+{
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul li a
+{
+  color: #ddd;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: auto;
+  padding: 2px;
+}
+
+nav > ul li a.active,
+nav > ul li a:hover
+{
+  background-color: #ddd;
+  color: #000;
+}
+
+
+
+nav.responsive .logo
+{
+  height: 10vh;
+  width: 10vh;
+  filter: brightness(200%);
+}
+
+nav.responsive
+{
+  height: 10vh;
+  background-color: #0D47A1;
+  filter: opacity(100%);
+}
+
+nav.responsive > ul li a
+{
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 10px;
+}
+
+nav.responsive > ul li a.active,
+nav.responsive > ul li a:hover
+{
+  background-color: #1976D2;
+  color: #0D47A1;
+  font-weight: bold;
+}
+
+
+.wrapper
+{
+  width: 100%;
+  min-height: 110vh;
+  display: grid;
+  grid-template-columns: minmax(10px, 6rem) minmax(400px, auto) minmax(10px, 6rem);
+  grid-auto-rows: 3rem 1fr 3rem;
+
+  grid-template-areas:
+    ".    .    ."
+    ". content ."
+    ".    .    .";
+}
+
+main
+{
+  grid-area: content;
+
+}
+
+footer
+{
+  background-color: #323232;
+  width: 100%;
+  min-height: 250px;
+}
+
+
+/*
+  Solution for on page links found on stackoverflow
+
+  Which referenced an article on the topic, shown below.
+  https://css-tricks.com/hash-tag-links-padding/
+
+  Stopped Working On Updated Website Design
+*/
+.marker::before
+{
+  display: block;
+  content: " ";
+  height: 10vh;
+  margin: -10vh 0 0;
+  visibility: hidden;
 }
