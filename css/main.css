@@ -228,7 +228,6 @@ nav.responsive .logo
 nav.responsive
 {
   height: 10vh;
-  /* background-color: #0D47A1; */
   background-color: black;
   filter: opacity(100%);
 }
@@ -243,11 +242,34 @@ nav.responsive > ul li a
 nav.responsive > ul li a.active,
 nav.responsive > ul li a:hover
 {
-  /* background-color: #1976D2;
-  color: #0D47A1; */
   background-color: #0D47A1;
   color: #ddd;
   font-weight: bold;
+}
+
+section.subnav
+{
+  margin: 0;
+  height: 5vh;
+  min-height: 25px;
+  width: 100%;
+  background-color: #0D47A1;
+  font-size: auto;
+
+  position: sticky;
+  top: 10vh;
+}
+
+section.subnav > ul
+{
+  font-family: 'Roboto', sans-serif;
+
+  list-style: none;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 
@@ -270,6 +292,11 @@ main
   grid-area: content;
 
 }
+
+
+/****************************************/
+/*                Footer                */
+/****************************************/
 
 /* footer flex layout */
 footer
@@ -323,7 +350,7 @@ footer > section.flex2
 {
   display: block;
   content: " ";
-  height: 10vh;
-  margin: -10vh 0 0 0;
+  height: 15vh;
+  margin: -15vh 0 0 0;
   visibility: hidden;
 }
