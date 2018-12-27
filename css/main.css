@@ -1,5 +1,10 @@
 /* google font imports */
+
+/* link text */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+/* header text */
+@import url('https://fonts.googleapis.com/css?family=Bungee');
 
 /* #0D47A1 B900*/
 /* #1976D2 B700 */
@@ -9,8 +14,15 @@
 /* colour scheme */
   /* primary blue material 900 #0D47A1 */
 
-/* default style */
 
+/* root html element for responsive font sizing */
+html
+{
+  font-size: 1.5vw;
+}
+
+
+/* CSS defaults */
 body
 {
   margin: 0;
@@ -37,6 +49,12 @@ header
   background-color: #1976D2;
   width: 100%;
   height: 100vh;
+  transition: .5s;
+}
+
+header.responsive
+{
+  height: 50vh;
 }
 
 header img
@@ -49,12 +67,40 @@ header img
 
 header.responsive img
 {
-  filter: none
+  filter: none;
+  height: 50%;
+  filter: opacity(0%);
 }
 
 header h1
 {
-  visibility: hidden;
+  /*
+    Design inspired from w3schools to create a centered text effect
+    https://www.w3schools.com/howto/howto_css_image_text.asp
+  */
+
+  transition: .5s;
+
+  /* center positioning title text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* font style */
+  font-family: 'Bungee', cursive;
+  font-size: 2rem;
+  font-weight: bolder;
+
+  color: white;
+  filter: opacity(70%);
+}
+
+header.responsive h1
+{
+  top: 25%;
+  color: black;
+  filter: opacity(100%);
 }
 
 nav
@@ -64,7 +110,11 @@ nav
   top: 0;
   left: 0;
   width: 100%;
+
   height: 5vh;
+
+  /* bottom constraint to break */
+  min-height: 25px;
   transform: .5s;
 
   display: flex;
@@ -90,6 +140,10 @@ nav a .logo
   filter: brightness(100%);
   height: 5vh;
   width: 5vh;
+
+  /* minimun constraints */
+  min-height: 25px;
+  min-width: 25px;
 }
 
 nav > ul
@@ -180,13 +234,46 @@ main
 
 }
 
+/* footer flex layout */
 footer
 {
+  /* text style */
   background-color: #323232;
+  color: #ddd;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5vw;
+  text-align: center;
+
+  /* footer wrapper display */
   width: 100%;
   min-height: 250px;
+  display: flex;
+  flex-direction: column;
 }
 
+footer section.flex
+{
+  display: flex;
+  flex-direction: row;
+}
+
+footer section > section
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+}
+
+footer > section.flex1
+{
+  flex-grow: 1;
+}
+
+footer > section.flex2
+{
+  flex-grow: 2;
+}
 
 /*
   Solution for on page links found on stackoverflow
@@ -194,13 +281,12 @@ footer
   Which referenced an article on the topic, shown below.
   https://css-tricks.com/hash-tag-links-padding/
 
-  Stopped Working On Updated Website Design
 */
-.marker::before
+.bookmark::before
 {
   display: block;
   content: " ";
   height: 10vh;
-  margin: -10vh 0 0;
+  margin: -10vh 0 0 0;
   visibility: hidden;
 }
