@@ -30,6 +30,13 @@ body
   font-family: sans-serif;
 }
 
+/* top of page link */
+div.top
+{
+  position: absolute;
+  top: 10px;
+}
+
 details.mNav
 {
   display: none;
@@ -91,16 +98,43 @@ header h1
   font-family: 'Bungee', cursive;
   font-size: 2rem;
   font-weight: bolder;
+  text-align: center;
 
-  color: white;
+  color: black;
   filter: opacity(70%);
 }
 
 header.responsive h1
 {
   top: 25%;
-  color: black;
+  color: white;
   filter: opacity(100%);
+}
+
+header h1 span.off
+{
+  visibility: hidden;
+}
+
+header h1 span.on
+{
+  visibility: visible;
+}
+
+header.responsive h1 span.off
+{
+  visibility: visible;
+
+  /* resetting positioning */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header.responsive h1 span.on
+{
+  visibility: hidden;
 }
 
 nav
@@ -194,7 +228,8 @@ nav.responsive .logo
 nav.responsive
 {
   height: 10vh;
-  background-color: #0D47A1;
+  /* background-color: #0D47A1; */
+  background-color: black;
   filter: opacity(100%);
 }
 
@@ -208,8 +243,10 @@ nav.responsive > ul li a
 nav.responsive > ul li a.active,
 nav.responsive > ul li a:hover
 {
-  background-color: #1976D2;
-  color: #0D47A1;
+  /* background-color: #1976D2;
+  color: #0D47A1; */
+  background-color: #0D47A1;
+  color: #ddd;
   font-weight: bold;
 }
 
