@@ -278,7 +278,7 @@ section.subnav > ul
   width: 100%;
   min-height: 110vh;
   display: grid;
-  grid-template-columns: minmax(10px, 6rem) minmax(400px, auto) minmax(10px, 6rem);
+  grid-template-columns: minmax(0, 6em) auto minmax(0, 6em);
   grid-auto-rows: 3rem 1fr 3rem;
 
   grid-template-areas:
