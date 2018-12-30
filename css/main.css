@@ -8,6 +8,9 @@
 /* header text */
 @import url('https://fonts.googleapis.com/css?family=Bungee');
 
+/* body text */
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,300');
+
 /* #0D47A1 B900*/
 /* #1976D2 B700 */
 /* #448AFF BA200 */
@@ -33,7 +36,8 @@ body
 {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
 }
 
 /* top of page link */
@@ -274,6 +278,7 @@ section.subnav
   margin-top: 0;
   min-height: 25px;
   height: calc(5vh + 1px);
+  max-height: 2ch;
   width: 100%;
   background-color: #0D47A1;
   font-size: auto;
@@ -393,15 +398,62 @@ section.authors a
 {
   text-align: center;
   text-decoration: none;
+
   width: 200px;
-  margin: 15px;
   max-width: 50%;
+
+  margin: 15px;
+  padding: 10px;
+  color: black;
+
+  border: 10px solid;
+  border-color: #fff;
 }
 
 section.authors a img
 {
   border-radius: 50%;
   width: 75%;
+  height: 25%;
+}
+
+section.authors a p
+{
+  /* constrain text */
+  max-height: 11ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-weight: 100;
+
+}
+
+section.authors a b
+{
+  color: #1976D2;
+
+}
+
+section.authors a h1
+{
+  font-family: 'Bungee', cursive;
+  color: #1976D2;
+
+  font-transform: uppercase;
+}
+
+/* on hover */
+section.authors a:hover
+{
+  background-color: #1976D2;
+  border-color: #0D47A1;
+}
+
+section.authors a:hover p,
+section.authors a:hover b,
+section.authors a:hover h1
+{
+  color: white;
 }
 
 /****************************************/
@@ -453,6 +505,44 @@ footer > section.flex2
 /*            Responsivness             */
 /****************************************/
 
+/* square monitor version */
+@media only screen and (max-width: 950px)
+{
+
+  html
+  {
+    font-size: 2vw;
+  }
+
+}
+
+/* tablet version */
+@media only screen and (max-width: 750px)
+{
+
+  html
+  {
+    font-size: 2.5vw;
+  }
+
+  section.subnav
+  {
+    display: none;
+  }
+
+  section.heading.sub
+  {
+    margin-left: calc((100% - 75%) / 2);
+    width: 75%;
+  }
+
+  section.heading
+  {
+    height: 10ch;
+  }
+
+}
+
 /* mobile version */
 @media only screen and (max-width: 500px)
 {
@@ -462,7 +552,11 @@ footer > section.flex2
     font-size: 3vw;
   }
 
-
+  section.heading.sub
+  {
+    width: 100%;
+    margin-left: 0;
+  }
 
   section.authors
   {
