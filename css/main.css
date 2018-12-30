@@ -1,4 +1,6 @@
-/* google font imports */
+/****************************************/
+/*             Fonts Import             */
+/****************************************/
 
 /* link text */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
@@ -14,6 +16,10 @@
 /* colour scheme */
   /* primary blue material 900 #0D47A1 */
 
+
+  /****************************************/
+  /*                Setup                 */
+  /****************************************/
 
 /* root html element for responsive font sizing */
 html
@@ -37,6 +43,10 @@ div.top
   top: 10px;
 }
 
+/****************************************/
+/*             Alt Versions             */
+/****************************************/
+
 details.mNav
 {
   display: none;
@@ -49,7 +59,9 @@ section.noJS
   display: none;
 }
 
-
+/****************************************/
+/*                Header                */
+/****************************************/
 
 header
 {
@@ -137,6 +149,10 @@ header.responsive h1 span.on
   visibility: hidden;
 }
 
+/****************************************/
+/*             Navigation               */
+/****************************************/
+
 nav
 {
   position: fixed;
@@ -216,7 +232,9 @@ nav > ul li a:hover
   color: #000;
 }
 
-
+/*
+  responsive navigation
+*/
 
 nav.responsive .logo
 {
@@ -247,31 +265,46 @@ nav.responsive > ul li a:hover
   font-weight: bold;
 }
 
+/****************************************/
+/*            Sub Navigation            */
+/****************************************/
+
 section.subnav
 {
-  margin: 0;
-  height: 5vh;
+  margin-top: 0;
   min-height: 25px;
+  height: calc(5vh + 1px);
   width: 100%;
   background-color: #0D47A1;
   font-size: auto;
 
   position: sticky;
-  top: 10vh;
+  top: calc(10vh - 1px);
+
 }
 
 section.subnav > ul
 {
   font-family: 'Roboto', sans-serif;
-
+  margin: 0;
   list-style: none;
   font-weight: bold;
+  text-decoration: none;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
+section.subnav > ul li a
+{
+  text-decoration: none;
+  color: #fff;
+}
+
+/****************************************/
+/*             Main Wrapper             */
+/****************************************/
 
 .wrapper
 {
@@ -293,6 +326,83 @@ main
 
 }
 
+/****************************************/
+/*           Content Headings           */
+/****************************************/
+section.heading
+{
+  background-color: #1976D2;
+  color: #fff;
+
+  width: 100%;
+
+  text-align: center;
+  user-select: none;
+  font-family: 'Bungee', cursive;
+  font-size: 1.5rem;
+
+  height: 25vh;
+  margin: 3rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+section.heading.sub
+{
+  width: 50%;
+  height: 15vh;
+  margin-left: 25%;
+  border-radius: 50px;
+}
+
+section.heading.sub a
+{
+  user-select: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+section.marker
+{
+  display: block;
+  visibility: hidden;
+  content: " ";
+  height: 15vh;
+  /* z-index: +1; */
+  margin-top: calc(3rem - 15vh);
+  margin-bottom: calc(-3rem + 10px);
+}
+
+/****************************************/
+/*               Authors                */
+/****************************************/
+
+section.authors
+{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+section.authors a
+{
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  margin: 15px;
+  max-width: 50%;
+}
+
+section.authors a img
+{
+  border-radius: 50%;
+  width: 75%;
+}
 
 /****************************************/
 /*                Footer                */
@@ -311,7 +421,7 @@ footer
 
   /* footer wrapper display */
   width: 100%;
-  min-height: 250px;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
 }
@@ -339,6 +449,38 @@ footer > section.flex2
   flex-grow: 2;
 }
 
+/****************************************/
+/*            Responsivness             */
+/****************************************/
+
+/* mobile version */
+@media only screen and (max-width: 500px)
+{
+
+  html
+  {
+    font-size: 3vw;
+  }
+
+
+
+  section.authors
+  {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  section.authors a
+  {
+    max-width: 75%;
+  }
+
+}
+
+/****************************************/
+/*          Final Adjustment            */
+/****************************************/
+
 /*
   Solution for on page links found on stackoverflow
 
@@ -352,5 +494,14 @@ footer > section.flex2
   content: " ";
   height: 15vh;
   margin: -15vh 0 0 0;
+  visibility: hidden;
+}
+
+/* hidden elements */
+.hidden
+{
+  height: 0px;
+  width: 0px;
+  display: none;
   visibility: hidden;
 }
