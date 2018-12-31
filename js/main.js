@@ -19,20 +19,6 @@ window.addEventListener('scroll', () =>{
 
 });
 
-function getVars(variable) {
-
-  var query = window.location.search.substring(1);
-  var vars = query.split("&");
-
-  for (var i=0;i<vars.length;i++) {
-     var pair = vars[i].split("=");
-     if(pair[0] == variable){return pair[1];}
-   }
-
-  return(false);
-
-};
-
 function clearAuthor() {
   document.getElementById('author-details').classList.add("hidden");
   document.getElementById('author-details').innerHTML = "";
@@ -51,10 +37,68 @@ function loadAuthor(authorID) {
 
   </section>
 
-  <section>
+  <section class="flex1-1">
 
-    <p>${author.about}</p>
+    <section class="captioned">
+
+      <img src="images/authors/${author.picture}.jpg" alt="${author.picture}"></img>
+
+      <p>${author.role}</p>
+
+      <ul class="sociallinks">
+
+        <li id="github">
+          <a href="${author.socialmedia.github}">
+            <!-- Icon made by Dave Gandy from flaticon under Creative Commons 3.0 -->
+            <!-- https://www.flaticon.com/free-icon/github-logo_25231#term=github&page=1&position=1 -->
+            <img src="images/icons/github.svg" alt="Github Icon By Dave Gandy">
+          </a>
+        </li>
+
+        <li id="twitter">
+          <a href="${author.socialmedia.twitter}">
+            <!-- Icon made by Freepik from flaticon under Creative Commons 3.0 -->
+            <!-- https://www.flaticon.com/free-icon/twitter-social-logotype_49351#term=twitter&page=1&position=46 -->
+            <img src="images/icons/twitter.svg" alt="Twitter Icon By Freepik">
+          </a>
+        </li>
+
+        <li id="blog">
+          <a href="${author.socialmedia.blog}">
+            <!-- Icon made by Freepik from flaticon under Creative Commons 3.0 -->
+            <!-- https://www.flaticon.com/free-icon/wordpress_152848 -->
+            <img src="images/icons/wordpress.svg" alt="Wordpress Icon By Freepik">
+            </a>
+        </li>
+
+        <li id="linkedin">
+          <a href="${author.socialmedia.linkedin}">
+            <!-- Icon made by Freepik from flaticon under Creative Commons 3.0 -->
+            <!-- https://www.flaticon.com/free-icon/linkedin_1384014#term=linkedin&page=1&position=27 -->
+            <img src="images/icons/linkedin.svg" alt="Linkedin Icon By Freepik">
+          </a>
+        </li>
+
+        <li id="website">
+          <a href="${author.socialmedia.website}">
+            <!-- Icon made by Hanan from flaticon under Creative Commons 3.0 -->
+            <!-- https://www.flaticon.com/free-icon/internet_109476#term=website&page=1&position=2 -->
+            <img src="images/icons/website.svg" alt="Website Icon By Hanan">
+          </a>
+        </li>
+
+      </ul>
+
+    </section>
+
+    <section>
+
+
+
+    </section>
 
   </section>
+
   `
+
 };

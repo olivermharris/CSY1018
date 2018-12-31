@@ -4,7 +4,7 @@ const data = {
       name: "Marcus Hemlin",
       role: "Lead Editor",
       about: "",
-      picture: "mhemlin.jpg",
+      picture: "mhemlin",
       articles: [
         {
           title: "The Importance of SSL Certificates",
@@ -26,7 +26,7 @@ const data = {
       name: "Shayne Hurst",
       role: "Content Manager",
       about: "",
-      picture: "shurst.jpg",
+      picture: "shurst",
       articles: [
         {
           title: "The Importance of SSL Certificates",
@@ -45,10 +45,10 @@ const data = {
       }
     },
     {
-      name: "Katlyn Kilton",
+      name: "Katlyn Hilton",
       role: "Lead Researcher",
       about: "",
-      picture: "kkilton.jpg",
+      picture: "khilton",
       articles: [
         {
           title: "The Importance of SSL Certificates",
