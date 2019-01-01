@@ -1,10 +1,12 @@
 let pos;
 
+// on load
 window.onload = () => {
   document.getElementById('nav').classList.remove("noJS");
 
 };
 
+// listen to the user scrolling
 window.addEventListener('scroll', () =>{
 
   pos = (document.body.getBoundingClientRect()).top;
@@ -19,11 +21,17 @@ window.addEventListener('scroll', () =>{
 
 });
 
+// functions //
+
+
+
+// clear author information
 function clearAuthor() {
   document.getElementById('author-details').classList.add("hidden");
   document.getElementById('author-details').innerHTML = "";
 }
 
+// load author information
 function loadAuthor(authorID) {
   document.getElementById('author-details').classList.remove("hidden");
 
