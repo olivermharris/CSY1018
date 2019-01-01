@@ -492,7 +492,21 @@ section.Fmarker
 .flex11
 {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+}
+
+.flex11 > :nth-child(odd)
+{
+  width: calc(50% - 15px);
+  padding: 15px;
+  padding-left: 0;
+}
+
+.flex11 > :nth-child(even)
+{
+  width: calc(50% - 15px);
+  padding: 15px;
+  padding-right: 0;
 }
 
 /* flexbox ratio: 1 to 2 */
@@ -510,6 +524,12 @@ section.Fmarker
 .flex12:nth-child(2)
 {
   flex-grow: 2;
+}
+
+/* reverse wrap */
+.flexre
+{
+  flex-wrap: wrap-reverse;
 }
 
 /****************************************/
@@ -680,6 +700,22 @@ footer section section ul.contacts li a
   color: inherit;
 }
 
+/* highlight links */
+footer section section ul.contacts li a:hover
+{
+  color: #1976D2;
+}
+
+/* copyright notice */
+h2.copyright
+{
+  color: #323232;
+  background-color: #ddd;
+  border-radius: 90%;
+  margin: 15px;
+}
+
+
 /****************************************/
 /*            Responsivness             */
 /****************************************/
@@ -720,6 +756,14 @@ footer section section ul.contacts li a
   section.heading
   {
     height: 10ch;
+  }
+
+  /* reformatting of flexboxes */
+  .flex11 > :nth-child(odd),
+  .flex11 > :nth-child(even)
+  {
+    padding: 15px 0;
+    width: 100%;
   }
 
 }
