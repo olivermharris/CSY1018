@@ -45,11 +45,15 @@ function loadAuthor(authorID) {
 
   </section>
 
-  <section class="flex1-1">
+  <section class="author flex11 flexre">
+
+    <section>
+      <p>${author.about}</p>
+    </section>
 
     <section class="captioned">
 
-      <img src="images/authors/${author.picture}.jpg" alt="${author.picture}"></img>
+      <img class="authorpic" src="images/authors/${author.picture}.jpg" alt="${author.picture}"></img>
 
       <p>${author.role}</p>
 

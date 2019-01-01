@@ -50,6 +50,14 @@ body
   font-weight: 300;
 }
 
+/* default image size */
+/* preventing images being displayed to stretch the users viewport */
+img
+{
+  height: 100px;
+  width: 100px;
+}
+
  /* bold tag */
 b,
 bold
@@ -606,6 +614,79 @@ section.authors a:hover h1
 {
   color: white;
 }
+
+/****************************************/
+/*                Author                */
+/****************************************/
+section.author section.captioned
+{
+  /* place positioned object behind sub navigation */
+  z-index: -1;
+  /* background-color: red; */
+}
+
+section.author section.captioned
+{
+  /* allows other objects to be displayed as a caption */
+  position: relative;
+}
+
+section.author section.captioned img.authorpic
+{
+  /* set the image location back into its origional location */
+  width: calc(100% - 15px);
+  height: 500px;
+}
+
+section.author section.captioned p
+{
+  /* set caption to top of image */
+  position: absolute;
+  top: -5px;
+  left: 15px;
+
+  /* text format */
+  text-align: center;
+  color: white;
+
+  background-color: #1976D2;
+  width: calc(100% - 30px);
+}
+
+section.author section.captioned ul
+{
+  padding: 0;
+
+  list-style: none;
+  /* set social links to bottom of image */
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+
+  width: calc(100% - 30px);
+
+  display: flex;
+  flex-flow: row nowrap;
+  z-index: +1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section.author section.captioned ul li
+{
+  margin: 0;
+  padding: 5px;
+  background-color: #1976D2;
+  border-radius: 50%;
+}
+
+section.author section.captioned ul li a img
+{
+  height: 30px;
+  width: 30px;
+  filter: invert(100%);
+}
+
 
 /****************************************/
 /*                Footer                */
