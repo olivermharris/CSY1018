@@ -26,7 +26,7 @@ const data = {
     {
       name: "Shayne Hurst",
       role: "Content Manager",
-      about: "",
+      about: "<p><b>Shayne Hurst</b> is one of the first content managers to ever join <b>Byte Planet Publishing</b>. Since our company was founder back in <b>2014</b>, <b>Shayne Hurst</b> has been with us, maintaining the overall operation of the majority of the website in association with <b>Byte Planet Publishing</b>.</p><p>Because of this, we at <b>Byte Planet Publishing</b> are grateful that he works for us, and understand how important his work is inside and outside of out community.</p>",
       picture: "shurst",
       articles: [
         {
@@ -49,7 +49,7 @@ const data = {
     {
       name: "Katlyn Hilton",
       role: "Lead Researcher",
-      about: "",
+      about: "<p><b>Katlyn Hilton</b> is one of the many talented young minds behind the articles content on our website, without her and her team of technology researchers, <b>Byte Planet Publishing</b> would not be able to deliver the reliable information which we strive for.</p><p><b>Miss Hilton</b> has been with our company since <b>March of 2017</b>, and has been a positive influence on all of our operation in house.</p>",
       picture: "khilton",
       articles: [
         {
