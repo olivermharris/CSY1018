@@ -99,31 +99,47 @@ section.noJS
 /*                Header                */
 /****************************************/
 
+/* class responsive: when exiting splash screen mode */
+
 header
 {
+  /* hightlight colour behind image */
   background-color: #1976D2;
+
+  /* display throughout the users viewport */
   width: 100%;
   height: 100vh;
+
+  /* animate between size changes */
   transition: .5s;
 }
 
 header.responsive
 {
+  /* half to be used as a title */
   height: 50vh;
 }
 
 header img
 {
+  /* fill container */
   width: 100%;
   height: 100%;
+
+  /* use background colour as a highlight */
   filter: opacity(70%);
+
+  /* animate altering image */
   transition: .5s;
 }
 
 header.responsive img
 {
+  /* remove filter to stop affecting other elements */
   filter: none;
+  /* animate between style */
   height: 50%;
+  /* hide image */
   filter: opacity(0%);
 }
 
@@ -154,11 +170,13 @@ header h1
 
 header.responsive h1
 {
+  /* title text design */
   top: 25%;
   color: white;
   filter: opacity(100%);
 }
 
+/* header text visible | title text hidden */
 header h1 span.off
 {
   visibility: hidden;
@@ -169,6 +187,7 @@ header h1 span.on
   visibility: visible;
 }
 
+/* header text hidden | title text visible */
 header.responsive h1 span.off
 {
   visibility: visible;
@@ -342,10 +361,11 @@ section.subnav > ul
   /* removes bullet points */
   list-style: none;
 
-
+  /* format text */
   font-weight: bold;
   text-decoration: none;
 
+  /* set objects position */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -384,6 +404,8 @@ main
 /****************************************/
 /*           Content Headings           */
 /****************************************/
+
+/* main headings */
 section.heading
 {
   background-color: #1976D2;
@@ -406,6 +428,7 @@ section.heading
 
 }
 
+/* sub headings */
 section.heading.sub
 {
   width: 50%;
@@ -427,6 +450,12 @@ section.heading.sub a
   color: #fff;
 }
 
+/*
+  Solution Based On Slack Overflow Solution:
+  https://css-tricks.com/hash-tag-links-padding/
+*/
+
+/* on page reference markers */
 section.marker
 {
   /* creates a block element and hides it from the users view */
@@ -535,6 +564,7 @@ section.authors a b
 
 }
 
+/* authors name link */
 section.authors a h1
 {
   font-family: 'Bungee', cursive;
@@ -626,6 +656,30 @@ footer section > section iframe.map
   height: 450px;
 }
 
+
+/* footer contact information */
+footer section.contact-details section ul.contacts,
+footer section section ul li
+{
+
+  align-items: center;
+  /* remove bullet point */
+  list-style: none;
+
+  /* set text colour to white */
+  color: #fff;
+
+  /* align text to center */
+  text-align: left;
+}
+
+footer section section ul.contacts li a
+{
+  /* remove buller points and inherit li font colour */
+  text-decoration: none;
+  color: inherit;
+}
+
 /****************************************/
 /*            Responsivness             */
 /****************************************/
@@ -636,6 +690,7 @@ footer section > section iframe.map
 
   html
   {
+    /* root responsive font size */
     font-size: 2vw;
   }
 
@@ -647,6 +702,7 @@ footer section > section iframe.map
 
   html
   {
+    /* root responsive font size */
     font-size: 2.5vw;
   }
 
@@ -674,21 +730,25 @@ footer section > section iframe.map
 
   html
   {
+    /* root responsive font size */
     font-size: 3vw;
   }
 
+  /* increase the overall size of sub headings */
   section.heading.sub
   {
     width: 100%;
     margin-left: 0;
   }
 
+  /* change the display of the authors section on the landing page to mobile readable */
   section.authors
   {
     flex-flow: column nowrap;
     align-items: center;
   }
 
+  /* increase the size of author objects on the landing page */
   section.authors a
   {
     max-width: 75%;
@@ -700,6 +760,7 @@ footer section > section iframe.map
 
   footer
   {
+    /* make the text visible to the user */
     font-size: 1rem;
   }
 
@@ -744,14 +805,20 @@ footer section > section iframe.map
   https://css-tricks.com/hash-tag-links-padding/
 
 */
-/* .bookmark::before
-{
-  display: block;
-  content: " ";
-  height: 15vh;
-  margin: -15vh 0 0 0;
-  visibility: hidden;
-} */
+/*
+  FEATURE REMOVED TO BE REWORKED IN HEADINGS
+  PSEUDO ELEMENT DOES NOT WORK WITH HEADER DESIGN
+
+  .bookmark::before
+  {
+    display: block;
+    content: " ";
+    height: 15vh;
+    margin: -15vh 0 0 0;
+    visibility: hidden;
+  }
+
+*/
 
 /* hidden elements */
 .hidden
