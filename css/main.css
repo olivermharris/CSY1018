@@ -354,6 +354,8 @@ section.subnav
 
   /* makes the navigation follow the user when they reach it on the page, under the main nav bar */
   position: sticky;
+  /* reset z-index to display above content and behind objects */
+  z-index: 1;
   top: calc(10vh - 1px);
 
 }
@@ -618,41 +620,48 @@ section.authors a:hover h1
 /****************************************/
 /*                Author                */
 /****************************************/
-section.author section.captioned
+
+.heading.subnav
 {
-  /* place positioned object behind sub navigation */
-  z-index: -1;
-  /* background-color: red; */
+  z-index: 9999;
 }
 
 section.author section.captioned
 {
+  /* place positioned object behind sub navigation */
+  z-index: inherit;
+
   /* allows other objects to be displayed as a caption */
   position: relative;
+
+  height: 500px;
+  padding: 0;
 }
 
 section.author section.captioned img.authorpic
 {
   /* set the image location back into its origional location */
-  width: calc(100% - 15px);
-  height: 500px;
+  width: 100%;
+  height: 100%;
 }
 
+/* caption title */
 section.author section.captioned p
 {
   /* set caption to top of image */
   position: absolute;
-  top: -5px;
-  left: 15px;
+  top: -20px;
+  left: 0;
 
   /* text format */
   text-align: center;
   color: white;
 
   background-color: #1976D2;
-  width: calc(100% - 30px);
+  width: 100%;
 }
 
+/* social media icons */
 section.author section.captioned ul
 {
   padding: 0;
@@ -660,24 +669,30 @@ section.author section.captioned ul
   list-style: none;
   /* set social links to bottom of image */
   position: absolute;
-  bottom: 15px;
-  left: 15px;
+  bottom: -10px;
+  left: 0;
 
-  width: calc(100% - 30px);
+  width: 100%;
 
   display: flex;
   flex-flow: row nowrap;
-  z-index: +1;
   justify-content: space-around;
   align-items: center;
 }
 
 section.author section.captioned ul li
 {
-  margin: 0;
+  margin: 2px;
   padding: 5px;
   background-color: #1976D2;
   border-radius: 50%;
+  filter: opacity(10%) brightness(50%);
+  transition: 0.5s;
+}
+
+section.author section.captioned:hover ul li
+{
+  filter: opacity(20%);
 }
 
 section.author section.captioned ul li a img
@@ -687,6 +702,19 @@ section.author section.captioned ul li a img
   filter: invert(100%);
 }
 
+section.author section.captioned ul li:hover
+{
+  border-radius: 45%;
+  padding: 4.5px;
+  margin: 0;
+  filter: opacity(100%) brightness(150%);
+}
+
+section.author section.captioned ul li:hover a img
+{
+  height: 35px;
+  width: 35px;
+}
 
 /****************************************/
 /*                Footer                */
@@ -837,6 +865,14 @@ h2.copyright
   section.heading
   {
     height: 10ch;
+  }
+
+  /* removal of on hover highlight due to the user tappiing instead of using a mouse */
+  section.author section.captioned ul li,
+  section.author section.captioned:hover ul li,
+  section.author section.captioned ul li:hover
+  {
+    filter: none;
   }
 
   /* reformatting of flexboxes */

@@ -28,7 +28,7 @@ section.noJS
 section.noJS > details section
 {
   /* display as a popup above other content */
-  z-index: 999999;
+  z-index: inherit;
 
   /* fix the position on the users screen */
   position: fixed;

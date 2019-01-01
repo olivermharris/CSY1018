@@ -3,7 +3,7 @@ const data = {
     {
       name: "Marcus Hemlin",
       role: "Lead Editor",
-      about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      about: "<section class=\"flex11\"> <section> <p><b>Marcus Hemlin</b> has been a valued editor since <b>2016</b>, where in <b>June of 2018</b> he was promoted to the lead editor. <b>Marcus</b> has wrote many articles for <b>Byte Planet Publishing</b>, a few of these include; the importance of ssl certication in 2018, limiting user input to reduce user bypass and how to securely setup a development testing virtual machine.</p></section><section><p>While being one of <b>Byte Planet Publishing’s</b> most valued editors, <b>Marcus Hemlin</b> works as an opensource developer working on projects by <b>The Processing Foundation</b> on Github.</p><p>This has allowed him to gain a better understanding of his research, due to being within the technology world around him more than other researchers and editors</p></section></section>",
       picture: "mhemlin",
       articles: [
         {
@@ -19,7 +19,8 @@ const data = {
         github: "https://github.com/#",
         twitter: "https://twitter.com/#",
         blog: "https://example.com/#",
-        linkedin: "https://linkedin.com/#"
+        linkedin: "https://linkedin.com/#",
+        website: "https://google.co.uk/#"
       }
     },
     {
@@ -41,7 +42,8 @@ const data = {
         github: "https://github.com/#",
         twitter: "https://twitter.com/#",
         blog: "https://example.com/#",
-        linkedin: "https://linkedin.com/#"
+        linkedin: "https://linkedin.com/#",
+        website: "https://google.co.uk/#"
       }
     },
     {
@@ -63,7 +65,8 @@ const data = {
         github: "https://github.com/#",
         twitter: "https://twitter.com/#",
         blog: "https://example.com/#",
-        linkedin: "https://linkedin.com/#"
+        linkedin: "https://linkedin.com/#",
+        website: "https://google.co.uk/#"
       }
     }
   ]
