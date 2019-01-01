@@ -1,44 +1,106 @@
 /* displays a popup declaring that javascript is disabled within the browser */
 
-section.noJS
-{
-  /* cancels out display none witin main.css */
-  display: block;
+/****************************************/
+/*                Header                */
+/****************************************/
 
-  /* sets the popup wrapper to the displays viewport */
-  width: 100%;
-  height: 100vh;
-
-  /* sets the popup wrapper to be fixed on the users screen */
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  /* forces the popups wrapper to be displayed for the entire viewport, while not being selectable by the user */
-  /* z-index: -100; */
-  filter: none;
-  /* z-index: -2; */
-  user-select: none;
-  filter: none;
-}
-
+/* removes the filter on the main splash image */
 header img
 {
     filter: none;
 }
 
-section.noJS > details
+/****************************************/
+/*                Popup                 */
+/****************************************/
+
+section.noJS
 {
-  z-index: 2;
-  background-color: red;
-  width: 100vw;
-  height: 100vh;
+  /* remove the display hidden when JavaScript is disabled */
+  display: block;
+
+  /* fixes the wrapper to the users screen */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-section.noJS > summary
+section.noJS > details section
 {
-  z-index: 2;
+  /* display as a popup above other content */
+  z-index: 999999;
+
+  /* fix the position on the users screen */
+  position: fixed;
+  display: block;
+
+  /* display the popup in the center of the users screen/viewport */
+  top: 20vh;
+  left: 25vw;
+
+  /* disply the popup as 50% of the users screen/viewport */
+  height: 65vh;
+  width: 50vw;
+
+  /* format popup text */
+  text-align: center;
+
+  /* highlight popup content */
+  padding: 10px;
+  background-color: #0D47A1;
+  color: white;
+  font-weight: 900;
+
+  /* border */
+  border: 15px solid;
+  border-color: #000;
+  border-radius: 15px;
+
 }
+
+section.noJS > details section h1
+{
+  /* header font */
+  font-family: 'Bungee', cursive;
+}
+
+
+section.noJS > details summary
+{
+  /* display the close/open link above other content */
+  z-index: 999999;
+
+  /* fix the position on the users screen */
+  position: fixed;
+  display: block;
+
+  /* display the button on the bottom right of the users screen */
+  bottom: 0;
+  right: 0;
+
+  /* design of button */
+
+  /* draw the users attention */
+  color: white;
+  background-color: red;
+
+  /* make the text readable */
+  padding: 10px;
+
+  /* remove the user selecting text when clicking on the button */
+  user-select: none;
+
+  /* removal of button icon */
+  list-style: none;
+  text-decoration: none;
+
+  /* makes it so the user can choose to ignore the warning message */
+  filter: opacity(25%);
+}
+
+/****************************************/
+/*              Navigation              */
+/****************************************/
 
 /* set the navigation panel into responsive layout */
 
@@ -52,7 +114,9 @@ nav.noJS .logo
 nav.noJS
 {
   height: 10vh;
-  background-color: #0D47A1;
+  background-color: black;
+
+  filter: opacity(100%);
 }
 
 nav.noJS > ul li a
@@ -68,4 +132,11 @@ nav.noJS > ul li a:hover
   background-color: #1976D2;
   color: #0D47A1;
   font-weight: bold;
+}
+
+/* removal of iframes which require JavaScript to function */
+iframe
+{
+  display: none;
+  visibility: hidden;
 }

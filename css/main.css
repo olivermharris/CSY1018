@@ -11,10 +11,15 @@
 /* body text */
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,300');
 
-/* #0D47A1 B900*/
-/* #1976D2 B700 */
-/* #448AFF BA200 */
-/* #90CAF9 B200 */
+/****************************************/
+/*         Colour Scheme Format         */
+/****************************************/
+
+/* material design colours */
+  /* #0D47A1 B900*/
+  /* #1976D2 B700 */
+  /* #448AFF BA200 */
+  /* #90CAF9 B200 */
 
 /* colour scheme */
   /* primary blue material 900 #0D47A1 */
@@ -34,22 +39,49 @@ html
 /* CSS defaults */
 body
 {
+  /* removal of margin and padding to make the website appear the same on different devices and browsers */
   margin: 0;
   padding: 0;
+
+  text-align: justify;
+
+  /* main website body / content font */
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
+}
+
+ /* bold tag */
+b,
+bold
+{
+  color: #0D47A1;
+}
+
+/* content title */
+h3
+{
+  text-align: center;
+  font-family: 'Bungee', cursive;
+  color: #0D47A1;
 }
 
 /* top of page link */
 div.top
 {
+
+  /* absolute positioning used to make the object appear in the same top location of the page while not being stuck to the users screen */
   position: absolute;
   top: 10px;
+
 }
 
 /****************************************/
 /*             Alt Versions             */
 /****************************************/
+
+/* disable the view of mobile navigation when the website is on the desktop version */
+
+/* desktop first designed website due to how information is displayed within the design process */
 
 details.mNav
 {
@@ -276,13 +308,24 @@ nav.responsive > ul li a:hover
 section.subnav
 {
   margin-top: 0;
+
+  /* makes the navigation not become unreadable when the user descreases window height */
   min-height: 25px;
+
+  /* sets the height relative to the users device */
   height: calc(5vh + 1px);
+
+  /* makes sure the height does not go more than 1 line */
   max-height: 2ch;
+
+  /* sets the width to the fullscreen/viewport width  */
   width: 100%;
+
+  /* highlight the main navigation bar */
   background-color: #0D47A1;
   font-size: auto;
 
+  /* makes the navigation follow the user when they reach it on the page, under the main nav bar */
   position: sticky;
   top: calc(10vh - 1px);
 
@@ -290,9 +333,16 @@ section.subnav
 
 section.subnav > ul
 {
+  /* link font */
   font-family: 'Roboto', sans-serif;
+
+  /* removes added margins */
   margin: 0;
+
+  /* removes bullet points */
   list-style: none;
+
+
   font-weight: bold;
   text-decoration: none;
 
@@ -364,22 +414,73 @@ section.heading.sub
   border-radius: 50px;
 }
 
+/* sub heading links */
+/* used to change the users location on the page or remove/close a sub section */
 section.heading.sub a
 {
+  /* removes link decoration */
   user-select: none;
   text-decoration: none;
+
+  /* sets text colour to white */
+  /* making it readable on the sub heading */
   color: #fff;
 }
 
 section.marker
 {
+  /* creates a block element and hides it from the users view */
+  display: block;
+  visibility: hidden;
+  content: " ";
+
+  /* sets the height to the same as the websites header */
+  height: 15vh;
+
+  /* positions the object relative to the marked element which alters the on page bookmark location */
+  margin-top: calc(3rem - 15vh);
+  margin-bottom: calc(-3rem + 10px);
+}
+
+/* fix for website footer */
+section.Fmarker
+{
+  /* similar to marker above */
   display: block;
   visibility: hidden;
   content: " ";
   height: 15vh;
-  /* z-index: +1; */
-  margin-top: calc(3rem - 15vh);
-  margin-bottom: calc(-3rem + 10px);
+
+  margin-top: -15vh;
+  /* changed by removing the padding of sub headings */
+}
+
+/****************************************/
+/*              Flex Boxes              */
+/****************************************/
+
+/* flexbox ratio: 1 to 1 */
+.flex11
+{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* flexbox ratio: 1 to 2 */
+.flex12
+{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.flex12:nth-child(1)
+{
+  flex-grow: 1;
+}
+
+.flex12:nth-child(2)
+{
+  flex-grow: 2;
 }
 
 /****************************************/
@@ -482,6 +583,7 @@ footer section.flex
 {
   display: flex;
   flex-direction: row;
+
 }
 
 footer section > section
@@ -491,14 +593,37 @@ footer section > section
   flex-wrap: wrap-reverse;
 }
 
-footer > section.flex1
+footer section > section.flex1
 {
   flex-grow: 1;
+  width: 50vw;
+  padding: 10px 10vw;
+  justify-content: center;
 }
 
-footer > section.flex2
+footer section > section.flex2
 {
   flex-grow: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+footer section > section img
+{
+
+  min-height: 150px;
+  min-width: 150px;
+
+  height: 20vw;
+  width: 20vw;
+
+  max-height: 500px;
+  max-width: 500px;
+}
+
+footer section > section iframe.map
+{
+  height: 450px;
 }
 
 /****************************************/
@@ -525,7 +650,7 @@ footer > section.flex2
     font-size: 2.5vw;
   }
 
-  section.subnav
+  section.subnav > ul
   {
     display: none;
   }
@@ -569,6 +694,43 @@ footer > section.flex2
     max-width: 75%;
   }
 
+  /****************************************/
+  /*  XX           Footer             XX  */
+  /****************************************/
+
+  footer
+  {
+    font-size: 1rem;
+  }
+
+  footer section.flex
+  {
+    /* reverse the display of footer items */
+    flex-direction: column-reverse;
+
+    /* center items */
+    justify-content: center;
+    align-items: center;
+
+    /* increase the fontsize so that it is readable on mobile */
+    font-size: 1rem;
+  }
+
+  footer section > section.flex1
+  {
+    /* reset flex grow size */
+    flex-grow: 1;
+
+    /* increase the overall display size */
+    width: 75vw;
+    padding: 10px 10vw;
+
+    /* center items */
+    justify-content: center;
+    align-items: center;
+  }
+
+
 }
 
 /****************************************/
@@ -582,14 +744,14 @@ footer > section.flex2
   https://css-tricks.com/hash-tag-links-padding/
 
 */
-.bookmark::before
+/* .bookmark::before
 {
   display: block;
   content: " ";
   height: 15vh;
   margin: -15vh 0 0 0;
   visibility: hidden;
-}
+} */
 
 /* hidden elements */
 .hidden
