@@ -98,6 +98,10 @@ section.noJS > details summary
   filter: opacity(25%);
 }
 
+section.noJS > details summary::-webkit-details-marker {
+ display:none;
+}
+
 /****************************************/
 /*              Navigation              */
 /****************************************/

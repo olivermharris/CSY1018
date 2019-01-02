@@ -36,6 +36,12 @@ html
 }
 
 
+/* implying links to the user */
+a
+{
+  cursor: pointer;
+}
+
 /* CSS defaults */
 body
 {
@@ -82,6 +88,34 @@ div.top
   top: 10px;
 
 }
+
+/****************************************/
+/*             Scroll Bars              */
+/****************************************/
+
+*::-webkit-scrollbar
+{
+      width: 10px;
+}
+
+*::-webkit-scrollbar-track
+{
+      background-color: #ddd;
+}
+
+*::-webkit-scrollbar-thumb
+{
+  background-color: #1976D2;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover
+{
+  border: 4px solid;
+  border-color: #0D47A1;
+}
+
+
 
 /****************************************/
 /*             Alt Versions             */
@@ -541,6 +575,70 @@ section.Fmarker
 {
   flex-wrap: wrap-reverse;
 }
+/****************************************/
+/*             Terminology              */
+/****************************************/
+
+/* hide spans for control */
+section.terminology > span
+{
+  visibility: hidden;
+}
+
+section.terminology
+{
+  height: 200px;
+  overflow: hidden;
+
+  overflow-y: scroll;
+}
+
+/* remove dropdown */
+section.terminology section details summary::-webkit-details-marker {
+ display:none;
+}
+
+section.terminology section details summary
+{
+  /* imply to user */
+  cursor: pointer;
+
+  /* overall format */
+  background-color: #1976D2;
+  filter: opacity(25%);
+
+  /* animate */
+  transition: .5s;
+
+  /* make the text readable */
+  padding: 5px;
+  color: white;
+  text-align: center;
+  user-select: none;
+}
+
+section.terminology section:hover details summary
+{
+  /* reset filters */
+  filter: opacity(100%) brightness(120%);
+}
+
+section.terminology section details section
+{
+  /* font style */
+  font-style: italic;
+  font-weight: 200;
+  font-size: 0.9em;
+
+  padding: 15px;
+}
+
+section.terminology section:hover details section
+{
+  /* highlight content */
+  font-weight: 400;
+}
+
 
 /****************************************/
 /*               Authors                */
@@ -615,6 +713,85 @@ section.authors a:hover b,
 section.authors a:hover h1
 {
   color: white;
+}
+/****************************************/
+/*               Article                */
+/****************************************/
+
+/* article display limitations */
+article
+{
+  /* limit the article viewport */
+  width: 100%;
+  height: 70vh;
+
+  /* hide overflow information, forces scroll bar behaviour */
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  /* used to adjust information content locations relative to the article */
+  position: relative;
+
+  /* setting article border */
+  border-left: 5px solid;
+  border-bottom: 5px solid;
+  border-color: #1976D2;
+
+  /* border radius layout */
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 30px;
+
+}
+
+article section
+{
+  padding: 10px;
+  margin: 5px;
+}
+
+/* stick the article information when the user scrolls */
+article section:first-child
+{
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* article title text */
+article section:first-child h1
+{
+  height: 3ch;
+
+  border-top-left-radius: 25px;
+  background-color: #1976D2;
+  color: white;
+
+  margin-top: 0;
+  text-align: center;
+
+  font-family: 'Bungee', cursive;
+  font-size: 1rem;
+}
+
+/* dropcap */
+article p:first-child::first-letter
+{
+  font-family: 'Bungee', cursive;
+  color: white;
+  background-color: #1976D2;
+  padding: 0 .3rem;
+  border-radius: 25%;
+  margin-top: -0.5rem;
+  margin-right: 0.3rem;
+
+  font-size: 4rem;
+  float: left;
+  line-height: 1;
+
+  text-transform: uppercase;
 }
 
 /****************************************/
@@ -881,6 +1058,12 @@ h2.copyright
   {
     padding: 15px 0;
     width: 100%;
+  }
+
+  /* removal of buffer spans */
+  section.terminology > span
+  {
+    display: none;
   }
 
 }
