@@ -769,6 +769,9 @@ section.openings a.card
 
   text-align: center;
 
+  /* due to fixed card element */
+  font-size: 20px;
+
 
 }
 
