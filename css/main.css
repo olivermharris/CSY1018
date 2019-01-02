@@ -747,11 +747,15 @@ section.openings div.xscrollbarwrapper
 }
 
 /* x-axis scrollbar cards */
-section.openings div.card
+section.openings a.card
 {
+  /* card box style */
   background-color: rgba(200,200,200,0.15);
   transition: .5s;
+
+  /* UX */
   cursor: pointer;
+  user-select: none;
 
   /* force elements on a single line */
   float: left;
@@ -762,14 +766,34 @@ section.openings div.card
   margin: 15px;
 
   border-radius: 15px;
+
+  text-align: center;
+
+
 }
 
-section.openings div.card:hover
+section.openings a.card:hover
 {
   background-color: #ddd;
+
+  width: calc(250px - (2 * 10px));
+  height: calc(250px - (2 * 10px));
+  margin: 10px;
 }
 
+section.openings a.card:active
+{
+  transition: .1s;
+  background-color: #1976D2;
 
+  width: calc(250px - (2 * 15px));
+  height: calc(250px - (2 * 15px));
+  margin: 15px;
+
+  border-radius: 50px;
+
+  color: #1976D2;
+}
 
 
 /****************************************/
