@@ -794,8 +794,18 @@ section.openings a.card:active
   margin: 15px;
 
   border-radius: 50px;
+}
 
-  color: #1976D2;
+section.openings a.card p
+{
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* hide content on select */
+section.openings a.card:active > *
+{
+  visibility: hidden;
 }
 
 
