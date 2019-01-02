@@ -35,7 +35,6 @@ html
   font-size: 1.5vw;
 }
 
-
 /* implying links to the user */
 a
 {
@@ -96,6 +95,7 @@ div.top
 *::-webkit-scrollbar
 {
       width: 10px;
+      height: 10px;
 }
 
 *::-webkit-scrollbar-track
@@ -112,10 +112,8 @@ div.top
 *::-webkit-scrollbar-thumb:hover
 {
   border: 4px solid;
-  border-color: #0D47A1;
+  border-color: rgba(0,0,255,0.1);
 }
-
-
 
 /****************************************/
 /*             Alt Versions             */
@@ -428,6 +426,7 @@ section.subnav > ul li a
 .wrapper
 {
   width: 100%;
+  overflow: hidden;
   min-height: 110vh;
   display: grid;
   grid-template-columns: minmax(0, 6em) auto minmax(0, 6em);
@@ -443,6 +442,10 @@ main
 {
   grid-area: content;
 
+  /* limit to prevent x-axis scrolling elements */
+  /* needed because of x-axis grids made with flex, grid or normal css */
+  max-width: calc(100vw - 10px);
+  overflow-x: hidden;
 }
 
 /****************************************/
@@ -714,6 +717,61 @@ section.authors a:hover h1
 {
   color: white;
 }
+/****************************************/
+/*               Openings               */
+/****************************************/
+
+section.openings
+{
+  width: 100%;
+  height: 265px;
+
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+/* x-axis scrollbar wrapper */
+section.openings div.xscrollbarwrapper
+{
+  display: block;
+
+  /* force the width of the element to fill with all the card items */
+  /* change when updating html using format */
+  width: calc(250px * 6);
+  /* format: calc(S * N) */
+  /* S = Box Size */
+  /* N = Number of Elements */
+
+  /* height of cards */
+  height: 250px;
+}
+
+/* x-axis scrollbar cards */
+section.openings div.card
+{
+  background-color: rgba(200,200,200,0.15);
+  transition: .5s;
+  cursor: pointer;
+
+  /* force elements on a single line */
+  float: left;
+
+  /* space elements from each other */
+  width: calc(250px - (2 * 15px));
+  height: calc(250px - (2 * 15px));
+  margin: 15px;
+
+  border-radius: 15px;
+}
+
+section.openings div.card:hover
+{
+  background-color: #ddd;
+}
+
+
+
+
 /****************************************/
 /*               Article                */
 /****************************************/
