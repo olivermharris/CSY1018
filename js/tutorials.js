@@ -19,18 +19,27 @@ let videodata = [
       "customise the screen options"
     ]
   },{
-    code:"Pu_9xIZpbjc",
+    // video data from pentacode on youtube: https://www.youtube.com/watch?v=8huMBHx-TKY
+    title: "Let's Encypt through certbot",
+    code:"8huMBHx-TKY",
     steps: [
-      "loading",
-      "steps",
-      "good",
-      "or",
-      "bad?"
+      "Goto: <a href=\"https://letsencypt.org/getting-started/\">letsencypt.org</a>",
+      "follow to: <a href=\"https://certbot.eff.org\">certbot</a>",
+      "Select your webserver type or archicture",
+      "Select your webserver OS",
+      "run update commands from list",
+      "add a certbot repository",
+      "update and install from repo",
+      "find your website through CLI",
+      "for nginx website architecure enter: root@<b>webserver</b>:/etc/nginx/sites-available# sudo letsencypt certonly- a webroot --webroot-path=/usr/share/nginx/<b>website</b>/ -d <b>website</b>",
+      "edit nginx configuration files",
+      "redirect traffic to https"
     ]
   },
   {
-    title: "",
-    code:"Pu_9xIZpbjc",
+    // video data from javidx9 on youtube: https://www.youtube.com/watch?v=ih20l3pJoeU
+    title: "Concepts of 3D graphics",
+    code:"ih20l3pJoeU",
     steps: [
 
     ]
