@@ -105,12 +105,14 @@ div.top
 
 *::-webkit-scrollbar-thumb
 {
+  /* websites scrollbar design */
   background-color: #1976D2;
   border-radius: 10px;
 }
 
 *::-webkit-scrollbar-thumb:hover
 {
+  /* UX Design */
   border: 4px solid;
   border-color: rgba(0,0,255,0.1);
 }
@@ -293,10 +295,12 @@ nav a .logo
 
 nav > ul
 {
+  /* link font */
   font-family: 'Roboto', sans-serif;
-
+  /* remove styling element */
   list-style: none;
 
+  /* constrain to row */
   display: flex;
   flex-grow: 2;
   justify-content: space-around;
@@ -333,6 +337,7 @@ nav > ul li a:hover
 
 nav.responsive .logo
 {
+  /* restriction of size */
   height: 10vh;
   width: 10vh;
   filter: brightness(200%);
@@ -352,6 +357,7 @@ nav.responsive > ul li a
   border-radius: 10px;
 }
 
+/* UX Desin */
 nav.responsive > ul li a.active,
 nav.responsive > ul li a:hover
 {
@@ -425,13 +431,22 @@ section.subnav > ul li a
 
 .wrapper
 {
+  /* respond to the size of the viewport */
   width: 100%;
+
+  /* restrice the content into the wrapper */
   overflow: hidden;
+
+  /* default size for new empty pages */
   min-height: 110vh;
   display: grid;
+
+  /* padding declaration */
   grid-template-columns: minmax(0, 6em) auto minmax(0, 6em);
+  /* content and top-bottom whitespace */
   grid-auto-rows: 3rem 1fr 3rem;
 
+  /* limit the content area */
   grid-template-areas:
     ".    .    ."
     ". content ."
@@ -440,6 +455,7 @@ section.subnav > ul li a
 
 main
 {
+  /* include in .wrapper grid */
   grid-area: content;
 
   /* limit to prevent x-axis scrolling elements */
@@ -455,19 +471,24 @@ main
 /* main headings */
 section.heading
 {
+  /* primary colour highlight */
   background-color: #1976D2;
   color: #fff;
 
+  /* fill wrapper width */
   width: 100%;
 
+  /* emphasise text */
   text-align: center;
   user-select: none;
   font-family: 'Bungee', cursive;
   font-size: 1.5rem;
 
+  /* readability */
   height: 25vh;
   margin: 3rem 0;
 
+  /* text alignment, for responsiveness */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -478,6 +499,7 @@ section.heading
 /* sub headings */
 section.heading.sub
 {
+  /* reduce size based of parent heading */
   width: 50%;
   height: 15vh;
   margin-left: 25%;
@@ -779,6 +801,7 @@ section.openings a.card:hover
 {
   background-color: #ddd;
 
+  transition: .5s;
   width: calc(250px - (2 * 10px));
   height: calc(250px - (2 * 10px));
   margin: 10px;
@@ -808,6 +831,140 @@ section.openings a.card:active > *
   visibility: hidden;
 }
 
+/****************************************/
+/*          Tutorials Videos            */
+/****************************************/
+
+section.videos
+{
+  /* declare border box */
+  width: 100%;
+  height: calc(150px + ( 2 * 15px ) + 10px );
+  /* constrain elements */
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+section.videos ul
+{
+  /* create a single line to fit the video cards */
+  width: calc( 5 * (300px + ( 2 * 15px ) ) );
+  height: calc(150px + ( 2 * 15px ) + 10px );
+  /* include video cards on that single line */
+  float: left;
+}
+
+/* card */
+section.videos ul li
+{
+  /* restrict size and style of card */
+  list-style: none;
+  width: 300px;
+  height: 150px;
+
+  padding: 0;
+  margin: 15px;
+
+  position: relative;
+
+  float: left;
+}
+
+/* selector */
+section.videos ul li a
+{
+  display: block;
+  /* display above video */
+  /* but behind sub nav header */
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+
+  contents: " ";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* video */
+section.videos ul li iframe
+{
+  /* display below loadVideo() container */
+  z-index: -1;
+  user-select: none;
+
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border: 0;
+  filter: opacity(50%);
+}
+
+section.videos ul li:hover iframe
+{
+  /* UX Design */
+  transition: .5s;
+  filter: opacity(100%);
+}
+
+/****************************************/
+/*           Tutorial Video             */
+/****************************************/
+
+/* border box layout */
+section.tutorial
+{
+  width: 100%;
+  height: 70vh;
+}
+
+section.tutorial section.video
+{
+  width: 70%;
+  height: 70vh;
+  margin-right: 15px;
+  background-color: black;
+  border-radius: 30px;
+
+  float: left;
+}
+
+section.tutorial section.video iframe
+{
+  /* 4.7063px from testing youtube iframe size when loaded */
+
+  margin: 15px;
+  margin-left: 25px;
+  width: calc(100% - (4.7063px + (3 * 15px) ) );
+  height: calc(70vh - (4.7063px + (2 * 15px) ) );
+  border: none;
+}
+
+/****************************************/
+/*          Tutorial Steps             */
+/****************************************/
+
+section.tutorial section.steps
+{
+  float: left;
+
+  width: calc(30% - 20px);
+  height: calc(70vh - 10px);
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+  border-left: 5px solid;
+
+  overflow: hidden;
+  overflow-y: scroll;
+
+  color: #1976D2;
+  text-align: center;
+}
 
 /****************************************/
 /*               Article                */
@@ -1111,6 +1268,18 @@ h2.copyright
     font-size: 2vw;
   }
 
+  section.tutorial section.video
+  {
+    width: 100%;
+  }
+
+  section.tutorial section.steps
+  {
+    width: 100%;
+    height: 30vh;
+    margin-top: 15px;
+  }
+
 }
 
 /* tablet version */
@@ -1159,6 +1328,18 @@ h2.copyright
   section.terminology > span
   {
     display: none;
+  }
+
+  /* mobile tutorial video design */
+  section.tutorial section.video,
+  section.tutorial section.video iframe
+  {
+    width: 100%;
+    height: 40vh;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border-radius: 0;
   }
 
 }

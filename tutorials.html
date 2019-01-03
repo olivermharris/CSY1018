@@ -39,6 +39,8 @@
     <!-- Website Functionality and Interaction -->
     <script src="js/main.js" type="text/javascript"></script>
 
+    <script src="js/tutorials.js" type="text/javascript"></script>
+
     <!-- Javascript Disabled Backup Design -->
     <noscript>
       <link rel="stylesheet" href="css/noJS.css">
@@ -129,7 +131,7 @@
 
         <li> <a href="#top">Videos</a> </li>
         <li> <a href="#guide">Guide</a> </li>
-        <li> <a href="#details">Video Details</a> </li>
+        <!-- <li> <a href="#details">Video Details</a> </li> -->
         <li> <a href="#footer">More</a> </li>
 
       </ul>
@@ -141,7 +143,80 @@
 
       <main>
 
+        <!-- <iframe src="https://www.youtube-nocookie.com/embed/${videoID}" allow="autoplay; encrypted-media;" allowfullscreen></iframe> -->
 
+        <section class="videos">
+          <ul>
+            <li id="1">
+
+              <a onclick="loadVideo(1)"></a>
+              <iframe src="https://www.youtube-nocookie.com/embed/${videoID}?controls=0" allow="encrypted-media;"></iframe>
+
+            </li>
+            <li id="2">
+
+              <a onclick="loadVideo(2)"></a>
+              <iframe src="https://www.youtube-nocookie.com/embed/hB0jUO4p7QU?controls=0" allow="encrypted-media;"></iframe>
+
+            </li>
+            <li id="3">
+
+              <a onclick="loadVideo(3)"></a>
+              <iframe src="https://www.youtube-nocookie.com/embed/${videoID}?controls=0" allow="encrypted-media;"></iframe>
+
+            </li>
+            <li id="4">
+
+              <a onclick="loadVideo(4)"></a>
+              <iframe src="https://www.youtube-nocookie.com/embed/${videoID}?controls=0" allow="encrypted-media;"></iframe>
+
+            </li>
+            <li id="5">
+
+              <a onclick="loadVideo(3)"></a>
+              <iframe src="https://www.youtube-nocookie.com/embed/${videoID}?controls=0" allow="encrypted-media;"></iframe>
+
+            </li>
+          </ul>
+        </section>
+
+        <section class="marker" id="guide"></section>
+        <section class="heading">
+            <h1 id="title">Confiqure Wordpress</h1>
+        </section>
+
+        <section class="tutorial">
+
+          <section class="video" id="video">
+
+            <!-- Video by WP Crafter, steps based on the video -->
+            <!-- https://www.youtube.com/watch?v=QLNy14QTkd8 -->
+            <iframe src="https://www.youtube-nocookie.com/embed/QLNy14QTkd8" allow="encrypted-media;" allowfullscreen></iframe>
+
+          </section>
+
+          <section  class="steps">
+            <h3>Steps:</h3>
+            <ol id="steps">
+
+              <li>delete default post</li>
+              <li>delete default page</li>
+              <li>clear trash</li>
+              <li>bulk action delete the default wordpress plugins</li>
+              <li>set a nickname in admin settings</li>
+              <li>choose the method of displaying this nickname publically</li>
+              <li>update admin profile</li>
+              <li>change the websites timezone to where it gets the most trafic, or local</li>
+              <li>select the permalinks tag</li>
+              <li>choose the postname option for SEO optimization</li>
+              <li>move to the dashboard</li>
+              <li>customise the screen options</li>
+
+            </ol>
+
+          </section>
+
+        </section>
 
       </main>
 
