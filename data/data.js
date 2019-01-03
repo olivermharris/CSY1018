@@ -71,3 +71,53 @@ const data = {
     }
   ]
 }
+
+
+
+// let data = {
+// 	reviews: [
+// 		{
+// 			type: "title",
+// 			data: " /* */ "
+// 		},
+// 		{
+// 			type: "load",
+// 			data: "authors",
+// 			id: " /* */ "
+// 		},
+// 		{
+// 			type: "content",
+// 			data: " /* */ "
+// 		}
+// 		]
+// 	],
+// 	authors: [
+// 		{
+// 			type: "name",
+// 			data: " /* */ "
+// 		},
+// 		{
+// 			type: "bio",
+// 			data: " /* */ "
+// 		},
+// 		{
+// 			type: "image",
+// 			data: " /* */ "
+// 		},
+// 	]
+// };
+//
+// function load(type, id) {
+// 	let item = data.type;
+//
+// 	for (let i = 0; i < item.length; i++) {
+//
+// 		if (item[i].type == "load") {
+// 			load(item[i].data, item[i].id);
+// 		} else {
+// 			document.getElementById(item.type).innerHTML = item.data;
+// 		};
+//
+// 	};
+//
+// };
