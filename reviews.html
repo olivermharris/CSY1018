@@ -39,6 +39,8 @@
     <!-- Website Functionality and Interaction -->
     <script src="js/main.js" type="text/javascript"></script>
 
+    <script src="js/reviews.js" type="text/javascript"></script>
+
     <!-- Javascript Disabled Backup Design -->
     <noscript>
       <link rel="stylesheet" href="css/noJS.css">
@@ -143,7 +145,47 @@
 
       <main>
 
+        <!-- reviews -->
 
+        <section>
+
+        </section>
+
+        <!-- review  / article -->
+
+        <section>
+
+          <article id="review">
+
+            <!-- article title -->
+            <section>
+              <h1 id="title">Title</h1>
+            </section>
+
+            <!-- article content -->
+            <section id="content">
+
+            </section>
+
+          </article>
+
+        </section>
+
+        <!-- author of article information -->
+
+        <section>
+          <!-- author section -->
+          <div class="hidden" id="author-details">
+
+            <section class="marker" id="author"></section>
+            <section class="heading sub">
+
+              <h1><a href="#authors">Authors Name</a></h1>
+
+            </section>
+
+          </div>
+        </section>
 
       </main>
 
@@ -251,4 +293,9 @@
     </footer>
 
   </body>
+
+  <script type="text/javascript">
+    loadArticle(0);
+  </script>
+
 </html>
