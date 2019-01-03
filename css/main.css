@@ -262,7 +262,6 @@ nav
 
   /* bottom constraint to break */
   min-height: 25px;
-  transform: .5s;
 
   display: flex;
   flex-direction: row;
@@ -320,7 +319,6 @@ nav > ul li a
   color: #ddd;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: auto;
   padding: 2px;
 }
 
@@ -388,7 +386,6 @@ section.subnav
 
   /* highlight the main navigation bar */
   background-color: #0D47A1;
-  font-size: auto;
 
   /* makes the navigation follow the user when they reach it on the page, under the main nav bar */
   position: sticky;
@@ -722,8 +719,6 @@ section.authors a h1
 {
   font-family: 'Bungee', cursive;
   color: #1976D2;
-
-  font-transform: uppercase;
 }
 
 /* on hover */
@@ -880,7 +875,7 @@ section.videos ul li a
   height: 100%;
   width: 100%;
 
-  contents: " ";
+  content: " ";
 
   position: absolute;
   top: 0;
