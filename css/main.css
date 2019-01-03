@@ -990,10 +990,21 @@ article
 
 }
 
+article img
+{
+  width: 100%;
+  height: 45vh;
+}
+
 article section
 {
   padding: 10px;
   margin: 5px;
+}
+
+article div
+{
+  padding: 0 15px;
 }
 
 /* stick the article information when the user scrolls */
@@ -1005,6 +1016,8 @@ article section:first-child
   top: 0;
   left: 0;
   z-index: 0;
+
+  overflow: hidden;
 }
 
 /* article title text */
@@ -1040,6 +1053,65 @@ article p:first-child::first-letter
 
   text-transform: uppercase;
 }
+
+/****************************************/
+/*               Reviews                */
+/****************************************/
+
+section.reviews
+{
+  width: 100%;
+  max-height: 50vh;
+
+  margin: 30px 0;
+
+  overflow-y: auto;
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+
+  border-color: #323232;
+
+  border-radius: 10px;
+
+}
+
+section.reviews ul
+{
+  list-style: none;
+  padding: 0;
+  margin: 15px;
+}
+
+section.reviews ul li
+{
+  background-color: #ddd;
+
+  filter: opacity(10%);
+
+  margin: 15px 0;
+
+  width: calc(100% - 30px);
+
+  font-weight: 100;
+
+  padding: 15px;
+
+  border-radius: 15px;
+
+  transition: .5s;
+
+  user-select: none;
+}
+
+section.reviews ul li:hover
+{
+  transition: .5s;
+  color: #fff;
+  font-weight: 400;
+
+  filter: opacity(100%);
+}
+
 
 /****************************************/
 /*                Author                */
@@ -1412,6 +1484,12 @@ h2.copyright
 /****************************************/
 /*          Final Adjustment            */
 /****************************************/
+
+/* temp bug fix on the reviews page */
+.reviews
+{
+  overflow: hidden;
+}
 
 /*
   Solution for on page links found on stackoverflow
