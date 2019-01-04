@@ -999,16 +999,11 @@ article img
 article section
 {
   padding: 10px;
-  margin: 5px;
-}
-
-article div
-{
-  padding: 0 15px;
+  margin: 5px 0;
 }
 
 /* stick the article information when the user scrolls */
-article section:first-child
+article > section:first-child
 {
   margin: 0;
   padding: 0;
@@ -1037,7 +1032,7 @@ article section:first-child h1
 }
 
 /* dropcap */
-article p:first-child::first-letter
+article > section p:first-child::first-letter
 {
   font-family: 'Bungee', cursive;
   color: white;
