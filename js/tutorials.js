@@ -45,22 +45,26 @@ let videodata = [
     ]
   },
   {
-    title: "",
-    code:"Pu_9xIZpbjc",
+    // video data from computerphile on youtube: https://www.youtube.com/watch?v=ciNHn38EyRc
+    title: "SQL Injection Demonstration",
+    code:"ciNHn38EyRc",
     steps: [
 
     ]
   },
   {
-    title: "",
-    code:"Pu_9xIZpbjc",
+    // video data from Root Project on youtube: https://www.youtube.com/watch?v=Mzfw9QWUgTI
+    title: "Disposable VMs",
+    code:"Mzfw9QWUgTI",
     steps: [
-
+      "<a href=\"sadd.io\">sadd.io</a>",
+      "resource for creating either a windows 7 / kali linux disposable virtual machine"
     ]
   },
   {
-    title: "",
-    code:"Pu_9xIZpbjc",
+    // video data from Joe Collins on youtube: https://www.youtube.com/watch?v=HIXzJ3Rz9po
+    title: "The Linux File System",
+    code:"HIXzJ3Rz9po",
     steps: [
 
     ]

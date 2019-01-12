@@ -18,13 +18,24 @@ let reviewdata = [
           <p>
             <b>Wordpres</b> is a content management framework created using the php programming language, because of this, wordpress can be easier for a developer / designer to fully customise their content they display on their blog. But, because of <b>wordpresses</b> big community, it is easier to setup through the many themes available.
           </p>
+          <h3>Advantages</h3>
+          <ul>
+            <li>Easy to setup</li>
+            <li>Community themes</li>
+            <li>GUI content management</li>
+          </ul>
+          <h3>Disadvantages</h3>
+          <ul>
+            <li>Customisation limited to php</li>
+            <li>Locked off premium features</li>
+          </ul>
         </section>
         <section>
           <h3> Jackyl</h3>
           <p>
             <b>Jackyl</b> is a static site generator, this is intended for more advanced developers to create a blog, log, etc.. almost from scratch.
           </p>
-          <h3>Benefits</h3>
+          <h3>Advantages</h3>
           <ul>
             <li>Fully customisable</li>
             <li>Hackable</li>
