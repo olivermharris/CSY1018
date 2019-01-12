@@ -426,7 +426,7 @@ section.subnav > ul li a
 /*             Main Wrapper             */
 /****************************************/
 
-.wrapper
+main
 {
   /* respond to the size of the viewport */
   width: 100%;
@@ -450,7 +450,7 @@ section.subnav > ul li a
     ".    .    .";
 }
 
-main
+.wrapper
 {
   /* include in .wrapper grid */
   grid-area: content;
@@ -1481,7 +1481,7 @@ h2.copyright
 /****************************************/
 
 /* temp bug fix on the reviews page */
-.reviews
+.constrained
 {
   overflow: hidden;
 }
